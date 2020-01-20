@@ -25,5 +25,18 @@ public class Cards {
         deck.remove(0);
         playerB.add(deck.get(0));
         deck.remove(0);
+
+        for (int i = 0; i < 25; i++) {
+            playerA.add(deck.get(0));
+            deck.remove(0);
+            playerB.add(deck.get(0));
+            deck.remove(0);
+        }
+        playerA.add(deck.get(0));
+        deck.remove(0);
+
+        System.out.println(playerA);
+        System.out.println(playerB);
+
     }
 }
