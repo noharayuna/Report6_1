@@ -3,7 +3,17 @@ package jp.ac.uryukyu.ie.e195747;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * ババ抜き前の下準備
+ */
 public class Cards {
+
+    /**
+     * トランプの山札作成 から 手札作成
+     *
+     * 引数なし
+     * return 戻り値なし
+     */
     void deck() {
 
         ArrayList<String> deck = new ArrayList<>(53);
@@ -16,13 +26,15 @@ public class Cards {
         deck.add("ジョーカー");
         //System.out.println(deck);
 
-        Collections.shuffle(deck);
-        System.out.println(deck);
-        ArrayList<String> playerA = new ArrayList<>();
-        ArrayList <String> playerB = new ArrayList<>();
+        Collections.shuffle(deck); //山札をシャッフル
 
-        playerA.add(deck.get(0));
-        deck.remove(0);
+        System.out.println("山札"+deck);
+
+        ArrayList<String> playerA = new ArrayList<>(); //プレイヤーAの手札準備
+        ArrayList <String> playerB = new ArrayList<>(); //プレイヤーBの手札準備
+
+        playerA.add(deck.get(0)); //山札からプレイヤーAの手札へ
+        deck.remove(0);    //山札から加えたカードは無くなる
         playerB.add(deck.get(0));
         deck.remove(0);
 
@@ -35,8 +47,10 @@ public class Cards {
         playerA.add(deck.get(0));
         deck.remove(0);
 
-        System.out.println(playerA);
-        System.out.println(playerB);
+        System.out.println("");
+        System.out.println("playerAの手札"+playerA);
+        System.out.println("");
+        System.out.println("playerBの手札"+playerB);
 
     }
 }
