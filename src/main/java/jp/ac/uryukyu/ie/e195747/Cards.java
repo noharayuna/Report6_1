@@ -1,6 +1,7 @@
 package jp.ac.uryukyu.ie.e195747;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Cards {
     void deck() {
@@ -14,5 +15,15 @@ public class Cards {
         }
         deck.add("ジョーカー");
         //System.out.println(deck);
+
+        Collections.shuffle(deck);
+        System.out.println(deck);
+        ArrayList<String> playerA = new ArrayList<>();
+        ArrayList <String> playerB = new ArrayList<>();
+
+        playerA.add(deck.get(0));
+        deck.remove(0);
+        playerB.add(deck.get(0));
+        deck.remove(0);
     }
 }
