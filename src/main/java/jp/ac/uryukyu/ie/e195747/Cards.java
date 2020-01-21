@@ -65,7 +65,7 @@ public class Cards {
         int count =0 ;
 
         for(int i=1; i<num; i++){
-            count += i;
+            count += 1;
         }
         System.out.println( count+"回の引き合いで決着");
     }
