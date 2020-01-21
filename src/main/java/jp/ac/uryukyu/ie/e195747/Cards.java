@@ -53,4 +53,20 @@ public class Cards {
         System.out.println("playerBの手札"+playerB);
 
     }
+
+    /**
+     * プレイヤーAとプレイヤーBのカードの引き合う回数のカウンター
+     *
+     * 引数のあるメソッド
+     * 引数の型　int
+     * @param num
+     */
+    void counter(int num){
+        int count =0 ;
+
+        for(int i=1; i<num; i++){
+            count += i;
+        }
+        System.out.println( count+"回の引き合いで決着");
+    }
 }
